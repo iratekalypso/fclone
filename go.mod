@@ -115,6 +115,7 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/spacemonkeygo/monkit/v3 v3.0.17 // indirect
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
+	github.com/valyala/fastjson v1.6.3
 	github.com/tklauser/numcpus v0.3.0 // indirect
 	github.com/vivint/infectious v0.0.0-20200605153912-25a574ae18a3 // indirect
 	github.com/zeebo/errs v1.2.2 // indirect
@@ -123,6 +124,7 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20211104193956-4c6863e31247 // indirect
 	google.golang.org/grpc v1.42.0 // indirect
+	gopkg.in/dc0d/tinykv.v4 v4.0.1
 	google.golang.org/protobuf v1.27.1 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 	storj.io/common v0.0.0-20210916151047-6aaeb34bb916 // indirect
