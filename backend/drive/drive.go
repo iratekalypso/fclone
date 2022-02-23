@@ -1087,9 +1087,7 @@ func getServiceAccountClient(ctx context.Context, opt *Options, credentialsData 
 	return conf, oauth2.NewClient(ctxWithSpecialClient, conf.TokenSource(ctxWithSpecialClient)), nil
 }
 
-func createOAuthClient(ctx context.Context, opt *Options, name string, m configmap.Mapper) (*http.Client, error) {
-	var oAuthClient *http.Client
-	var err errorfunc gatherServiceAccountCredentials(opt *Options) ([]string, error) {
+func gatherServiceAccountCredentials(opt *Options) ([]string, error) {
 	if len(opt.ServiceAccountFolder) != 0 {
 		folder := os.ExpandEnv(path.Clean(opt.ServiceAccountFolder))
 		infos, err := ioutil.ReadDir(folder)
@@ -1117,7 +1115,7 @@ func createOAuthClient(ctx context.Context, opt *Options, name string, m configm
 			var loadedCreds []byte
 			var err error
 
-	loadedCreds, err = base64.StdEncoding.DecodeString(serviceAccountFile)
+			loadedCreds, err = base64.StdEncoding.DecodeString(serviceAccountFile)
 			if err != nil {
 				loadedCreds, err = ioutil.ReadFile(os.ExpandEnv(serviceAccountFile))
 			}
