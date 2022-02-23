@@ -1092,7 +1092,7 @@ func gatherServiceAccountCredentials(opt *Options) ([]string, error) {
 		folder := os.ExpandEnv(path.Clean(opt.ServiceAccountFolder))
 		infos, err := ioutil.ReadDir(folder)
 		if err != nil {
-			return nil, errors.Wrap(err, "error opening service account credentials folder")
+			return nil, err
 		}
 
 		var files = make([]string, len(infos))
@@ -1125,7 +1125,7 @@ func gatherServiceAccountCredentials(opt *Options) ([]string, error) {
 			}
 
 			if err != nil {
-				return nil, errors.Wrap(err, "error opening service account credentials file")
+				return nil, err
 			}
 
 			serviceAccountCredentials = append(serviceAccountCredentials, string(loadedCreds))
